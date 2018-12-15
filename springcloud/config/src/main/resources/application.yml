@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/hoyan/config-repo.git
+          username: hoyan
+          password: liu52013141106
+          basedir: F:/springcloud/gitConf
+    loadbalancer:
+      retry:
+        enabled: true
+  rabbitmq:
+    addresses: 192.168.12.131
+    username: guest
+    password: guest
+    port: 5672
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    ip-address: true
+server:
+  port: 8084
+management:
+  security:
+    enabled: false
+  endpoints:
+   web:
+    expose: "*"
+ribbon:
+  ReadTimeout: 6000
+  SocketTimeout: 6000
+  ConnectTimeout: 6000
+hystrix:
+  command:
+    default:
+       execution:
+          isolation:
+              thread:
+                 timeoutInMilliseconds: 6000

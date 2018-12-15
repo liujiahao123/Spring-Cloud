@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: zuul
+  redis:
+        host: 127.0.0.1
+        database: 0
+        port: 6379
+        password: 123456
+        pool:
+          max-active: 8
+          max-wait: -1
+          max-idle: 8
+          min-idle: 0
+        timeout: 5000
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8087
+ribbon:
+  ReadTimeout: 5000
+  SocketTimeout: 5000
