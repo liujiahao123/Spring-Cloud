@@ -6,8 +6,8 @@ spring:
       server:
         git:
           uri: https://gitee.com/hoyan/config-repo.git
-          username: hoyan
-          password: liu52013141106
+          username: 用户名
+          password: 密码
           basedir: F:/springcloud/gitConf
     loadbalancer:
       retry:
